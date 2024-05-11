@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET CURRENT LOCATION</title>
+</head>
+<body>
+
+    <h1 id="text">Get Current Locaion</h1>
+
+    <button id="get-current-location">Get Current Location</button>
+
+
+
+    <script>
+
+async function getdata(){
+    let data = await fetch("https://dog.ceo/api/breeds/image/random")
+    console.log(data);
+    // return await data.json();
+}
+
+let status = getdata();
+console.log(status)
+
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

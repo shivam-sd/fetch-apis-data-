@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Fetch Api</title>
+</head>
+<body>
+    
+
+    <script> 
+
+
+async function getdata(){
+    let data = await fetch("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur/jpy.json");
+    // console.log(data);
+    return await data.json();
+}
+async function main(){
+let result = await getdata(); 
+console.log(result);
+}
+
+main();
+
+
+
+    
+    // let p =fetch("http://api.weatherapi.com/v1/current.json?key=163f854921da4622b6384132241404&q=jaunpur&aqi=yes");
+    // p.then((value) => {
+    //     console.log(value.status);
+    //     console.log(value.ok);
+    //     return value.json();
+    // }).then((value1) => {
+    //     console.log(value1);
+    // });
+
+    </script>
+</body>
+</html>

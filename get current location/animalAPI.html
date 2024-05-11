@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+async function getdata(){
+    let result = await fetch("https://dog.ceo/api/breeds/image/random");
+    // console.log(result);
+    console.log(result.ok);
+    console.log(result.status);
+
+    return await result.json();
+}
+
+async function fetchdata(){
+    let data = await getdata();
+    console.log(data);
+    
+    }
+    fetchdata();
+
+// let server = serverdata(() =>{
+//     let x = fetch("https://dog.ceo/api/breeds/image/random");
+//     console.log(x);
+// })
+
+
+    </script>
+</body>
+</html>
